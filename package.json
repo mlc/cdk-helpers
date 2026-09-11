@@ -1,14 +1,30 @@
 {
-  "name": "cdk-helpers",
+  "name": "@mlc/cdk-helpers",
+  "version": "0.1.0",
+  "author": {
+    "name": "mlc",
+    "url": "https://github.com/mlc"
+  },
+  "license": "WTFPL",
   "packageManager": "yarn@4.18.0",
-  "scripts": { "postinstall": "husky" },
+  "type": "module",
+  "scripts": {
+    "postinstall": "husky"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
+  "dependencies": {
+    "aws-cdk-lib": "^2.268.0",
+    "constructs": "^10.8.1"
+  },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.12",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.5.0"
+    "@biomejs/biome": "2.5.12",
+    "@tsconfig/node24": "24.0.5",
+    "@types/node": "24.13.4",
+    "husky": "9.1.7",
+    "lint-staged": "17.5.0",
+    "typescript": "6.0.3"
   },
   "lint-staged": {
     "*": [
