@@ -1,4 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["mlc/renovate-config"]
+  "extends": ["mlc/renovate-config"],
+  "packageRules": [
+    {
+      "description": "don't pin dependencies in libs",
+      "enabled": false,
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["pin"]
+    }
+  ]
 }
