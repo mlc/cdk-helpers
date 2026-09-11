@@ -22,7 +22,7 @@ export class LogDelivery extends Construct {
     super(scope, id)
 
     const source = new logs.CfnDeliverySource(this, 'source', {
-      name: Names.uniqueResourceName(this, {}) + '-source',
+      name: `${Names.uniqueResourceName(this, {})}-source`,
       logType: 'ACCESS_LOGS',
       resourceArn: distribution.distributionArn,
     })
@@ -33,7 +33,7 @@ export class LogDelivery extends Construct {
     })
 
     const destination = new logs.CfnDeliveryDestination(this, 'destination', {
-      name: Names.uniqueResourceName(this, {}) + '-destination',
+      name: `${Names.uniqueResourceName(this, {})}-destination`,
       destinationResourceArn: this.logGroup.logGroupArn,
       outputFormat: 'json',
     })

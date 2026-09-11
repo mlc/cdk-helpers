@@ -5,11 +5,19 @@
     "name": "mlc",
     "url": "https://github.com/mlc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlc/cdk-helpers.git"
+  },
+  "main": "dist/index.js",
   "license": "WTFPL",
   "packageManager": "yarn@4.18.0",
   "type": "module",
   "scripts": {
-    "postinstall": "husky"
+    "postinstall": "husky",
+    "check": "biome check",
+    "check:fix": "biome check --write",
+    "prepublish": "yarn check && tsc"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
