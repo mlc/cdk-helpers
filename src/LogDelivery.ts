@@ -42,7 +42,7 @@ export class LogDelivery extends Construct {
       deliverySourceName: source.name,
       deliveryDestinationArn: destination.attrArn,
     })
-    delivery.addDependency(source)
+    delivery.addResourceDependency(source)
   }
 
   public readonly logGroup: logs.LogGroup
