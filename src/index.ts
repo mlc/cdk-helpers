@@ -1,1 +1,1 @@
-export { LogDelivery } from './LogDelivery.ts'
+export { LogDelivery } from './LogDelivery.ts';
